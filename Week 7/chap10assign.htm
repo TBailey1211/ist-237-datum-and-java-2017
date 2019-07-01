@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<style>
+	</style>
+	<title>Chapter 10Assignment</title>
+</head>
+
+<body>
+	<h1>Event Handlers At Work!</h1>
+	<h2>By <i>Taylor Bailey</i></h2>
+
+a. <a href="https://www.google.com" onmouseover = "document.bgColor='green'" 
+	onmouseout = "document.bgColor='white'">Search Here<br><br></a>
+
+b. <input type="button" value="Click Me"
+	onclick = "window.alert('You clicked the button!');"><br><br>
+
+c.
+	My name is:
+	<input type="text" id="name" value=Sam
+	onblur = "window.alert('Name changed to: ' + value);"> Go ahead, change my name.<br><br>
+
+d. <button onclick= "reload()">Reload</button>
+
+	<script>
+	function reload() {
+		location.reload();
+	}
+	</script><br><br>
+
+e. <button onclick="favSite()">My Favorite Site</button>
+
+	<script>
+	function favSite() {
+		window.open("https://twitter.com");
+	}
+	</script>
+
+</body>
