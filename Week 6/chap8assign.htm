@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<style>
+	body{background-color:violet}
+	</style>
+	<title>Chapter 8 Assignment</title>
+	<script>
+	//Browser information
+	document.write("<h1>Browser Settings:</h1>");
+	if(navigator.javaEnabled)
+	{
+		document.write("Java is Enabled!" + "<br>");
+	}
+	else
+	{
+		document.write("Java is Disabled!" + "<br>");
+	}
+	document.write("Browser platform: " + navigator.platform + "<br>");
+	document.write("Browser code name: " + navigator.appCodeName + "<br>");
+	document.write("Browser name: " + navigator.appName + "<br>");
+	document.write("Browser version: " + navigator.appVersion + "<br>");
+
+	//Space
+	document.write("<br>");
+	document.write("<br>");
+	document.write("<br>");
+
+	//Person information
+	var name=prompt("Please enter your full name: ", "");
+	var age=prompt("Please enter your age: ", "");
+	var gender=prompt("Please enter your gender: ", "M, m, F, or f");
+
+	function Person(name, age, gender)
+	{
+		this.name = name;
+		this.age = age;
+		this.gender = gender;
+		this.lifeExpect = life_expect;
+		this.writeGender = write_gender;
+	}
+	
+	function life_expect()
+	{
+		var numYears;
+		{
+			if(gender == "F" || gender == "f")
+			{
+				numYears = 81 - this.age;
+				return numYears;
+			}
+			else
+			{
+				if(gender == "M" || gender == "m")
+				{
+					numYears = 76 - this.age;
+					return numYears;
+				}
+			}
+		}
+	}
+
+	var myPerson = new Person(name, age, gender);
+
+	document.write("Person's Properties:<br>")
+	document.write(myPerson.name + "<br>");
+	document.write(myPerson.age + "<br>");
+	document.write(myPerson.gender + "<br>");
+	document.write(myPerson.lifeExpect());
+
+	document.write("<br>");
+	document.write("<br>");
+
+	function write_gender()
+	{
+		var finalGender;
+		if(gender == "M" || gender == "m")
+		{
+		finalGender = "male";
+		return finalGender;
+		}
+		else
+		{
+			if(gender == "F" || gender == "f")
+			{
+				finalGender = "female";
+				return finalGender;
+			}
+		}
+	}
+	
+
+	document.write("Hi " + myPerson.name + ", as a " + age + " year old " + myPerson.writeGender() + " you are expected to live " + myPerson.lifeExpect() + " more years!");
+	</script>
+</head>
+
+<body>
+
+	<script>
+
+	</script>
+
+</body>
+</html>
