@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<style>
+		body{background-color:tan}
+	</style>
+	<title>Chapter 6 Assignment 2</title>
+	<script>
+	function loan_program()
+	{
+		var car_price=prompt("Welcome to the Loan Payment Program. Please enter the price of your vehicle: ", "");
+		var down_payment=prompt("Please enter your down payment amount: ", "");
+		var annual_interest_rate=prompt("Please enter the annual interest rate: ", "");
+		document.write("Vehicle price: $" + parseFloat(car_price).toFixed(2) + "<br>");
+		document.write("Down Payment: $" + parseFloat(down_payment).toFixed(2) + "<br>");
+		document.write("Interest Rate: " + annual_interest_rate + "%<br>");
+		var loan_amount;
+		loan_amount = car_price - down_payment;
+		document.write("Loan Amount: $" + parseFloat(loan_amount).toFixed(2));
+		var monthly_interest_rate;
+		monthly_interest_rate = annual_interest_rate / 1200;
+		var months_for_loan = 24;
+		document.write("<pre># of Months       Payment/Month</pre>");
+		while(months_for_loan <= 60)
+		{
+		document.write("<pre>" + months_for_loan + "                " + calculate_payment(monthly_interest_rate, months_for_loan, loan_amount) + "</pre>");
+			months_for_loan = months_for_loan + 12;
+		}
+	}
+	function calculate_payment(monthly_interest_rate,months_for_loan,loan_amount)
+	{
+		var base = Math.pow(1 + monthly_interest_rate, months_for_loan);
+		var payment = loan_amount * monthly_interest_rate / (1 - (1/base));
+		return parseFloat(payment).toFixed(2);
+	}
+	</script>
+</head>
+<body>
+<h1>Loan Calculator</h1>
+	<script>
+	loan_program();
+	</script>
+</body>
+</html>
