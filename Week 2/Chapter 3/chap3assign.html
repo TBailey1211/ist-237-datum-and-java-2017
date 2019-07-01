@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chapter 3 Assignment</title>
+	<script>
+		var first_name=prompt("What is your first name?", "");
+		var last_name=prompt("What is your last name?", "");
+		var hourly_wage=prompt("What is your hourly wage?", "");
+		hourly_wage = parseFloat(hourly_wage);
+		weekPay = hourly_wage * 40;
+		var job_id;
+		var job_title;
+	</script>
+	<style>
+		body{background-color:lightblue}
+		h1{color:yellow;}
+	</style>
+</head>
+<body>
+	<script>
+		job_title = "Programmer";
+		job_id = "B0123456";
+		
+		document.write("<b>First Name:</b> " + first_name + "<br>");
+		document.write("<b>Last Name:</b> " + last_name + "<br>");		
+		document.write("<b>Job Title:</b> " + job_title + "<br>");
+		document.write("<b>Job ID:</b> " + job_id + "<br>");
+		document.write("<b>Weekly Pay:</b> " + weekPay + "<br><br>");
+
+		document.write("<a href=www.tridenttech.edu>Trident Technical College</a>")
+
+		document.write("<h1>THE END</h1>");
+	</script>
+</body>
+</html>
