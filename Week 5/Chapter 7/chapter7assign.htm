@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Chapter 7 Assignment</title>
+	<script>
+		//Arrays
+		var books = ["War and Peace", "Huckleberry Finn", "The Return of the Native", "A Christmas Carol", "Exodus"];
+
+		var authors = [];
+
+		//Populate authors array
+		for(var x = 0; x < books.length; x++)
+		{
+			authors.push(prompt("Please input the author of " + books[x]));
+		}
+
+		//Code for * border
+		for(var y = 0; y < 50; y++)
+		{
+			document.write("<b>*</b>");
+		}
+		document.write("<br>");
+
+		//Output line for each book and author
+		for(var x = 0; x < books.length; x++)
+		{
+			document.write("<b>Book: </b>" + books[x] + "<b> Author: </b>" + authors[x] + "<br>");
+		}
+
+		//Code for * border
+		for(var y = 0; y < 50; y++)
+		{
+			document.write("<b>*</b>");
+		}
+		document.write("<br>");
+
+		//Author title array
+		var author_title = [];
+		for(var x = 0; x < books.length; x++)
+		{
+		author_title.push(authors[x].concat(" wrote ", books[x], "<br>"));
+		var author_title_final = author_title.join('');
+		}
+		document.write(author_title_final);
+
+		//Code for * border
+		for(var y = 0; y < 50; y++)
+		{
+			document.write("<b>*</b>");
+		}
+		document.write("<br>");
+
+		//Pop method
+		author_title.pop();
+		for(var x = 0; x < books.length; x++)
+		{
+		var author_title_final = author_title.join('');
+		}
+		document.write(author_title_final);
+
+		//Code for * border
+		for(var y = 0; y < 50; y++)
+		{
+			document.write("<b>*</b>");
+		}
+		document.write("<br>");
+
+		//Sort method
+		author_title.sort();
+		for(var x = 0; x < books.length; x++)
+		{
+		var author_title_final = author_title.join('');
+		}
+		document.write(author_title_final);
+
+		//Code for * border
+		for(var y = 0; y < 50; y++)
+		{
+			document.write("<b>*</b>");
+		}
+		document.write("<br>");
+	</script>
+</head>
+
+<body>
+
+	<script>
+
+	</script>
+
+</body>
+</html>
