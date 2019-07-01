@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<style>
+		body{background-color:orange}
+	</style>
+	<title>Chapter 5 Assignment</title>
+	<script>
+		function currency_exchange(){
+			var US_dollars=prompt("Please enter the amount of US dollars to convert: ", "");
+			var exchange_rate;
+			var GBP = 0.774085;
+			var CAD = 1.249528;
+			var EUR = 0.835516;
+			var JPY = 109.195587;
+			var AUD = 1.256915;
+			document.write("$" + US_dollars + " in U.S. Currency is approximately equivalent to:<br>");
+			document.write(calc_exchange(US_dollars, GBP) + " GBP (British Pounds) <br>" );
+			document.write(calc_exchange(US_dollars, CAD) + " CAD (Canadian Dollars)<br>");
+			document.write(calc_exchange(US_dollars, EUR) + " EUR (Euros)<br>");
+			document.write(calc_exchange(US_dollars, JPY) + " YEN (Japanese Yen)<br>");
+			document.write(calc_exchange(US_dollars, AUD) + " AUD (Australian Dollars)<br>");
+		}
+
+		function calc_exchange(US_dollars, exchange_rate){
+			var final_rate;
+			final_rate = US_dollars * exchange_rate;
+			final_rate = parseFloat(final_rate).toFixed(2);
+			return final_rate;
+		}
+	</script>
+</head>
+
+<body>
+
+	<script>
+	currency_exchange();
+	</script>
+
+</body>
+</html>
